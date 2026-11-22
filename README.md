@@ -2,6 +2,7 @@
 
 Portafolio web de presentación profesional para Ingeniería en Sistemas, con perfil, currículo, muestra de proyectos destacados y formación/certificaciones.
 
+Web Site: https://yajanismarsalazar.github.io/portafolio-yajanismar-salazar/
 ## Contenido del portafolio
 - **Presentación y contacto:** Perfil como Analista de Sistemas y estudiante de Ingeniería en Sistemas.
 - **Currículo actualizado:** Experiencia, herramientas técnicas y acceso al documento en PDF (`CURRICULO VITAE YAJANISMAR SALAZAR UBA.pdf`).
