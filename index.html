@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yajanismar Salazar — Analista de Sistemas | Portafolio</title>
+  <style>
+    :root {
+      --navy: #162a45;
+      --navy-dark: #0e1c2f;
+      --slate-accent: #2c5282;
+      --bg: #f1f4f8;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #526071;
+      --border: #cbd5e1;
+      --soft: #e2e8f0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+      color: #ffffff;
+      padding: 48px 20px 64px;
+      border-bottom: 4px solid var(--slate-accent);
+    }
+
+    .hero-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .avatar-wrap {
+      flex: 0 0 148px;
+      height: 148px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+      background: var(--navy-dark);
+    }
+
+    .avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .hero-text {
+      flex: 1 1 320px;
+    }
+
+    .hero-role {
+      display: inline-block;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #cbd5e1;
+      margin-bottom: 8px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.15rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      color: #e2e8f0;
+      max-width: 680px;
+      margin-bottom: 18px;
+      font-size: 0.98rem;
+    }
+
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      margin-bottom: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      padding: 7px 14px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    main {
+      max-width: 1060px;
+      margin: -32px auto 48px;
+      padding: 0 20px;
+      display: grid;
+      gap: 22px;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 26px;
+      box-shadow: 0 4px 14px rgba(22, 42, 69, 0.05);
+    }
+
+    section h2 {
+      color: var(--navy);
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid var(--soft);
+    }
+
+    .cv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+
+    .item-block h3 {
+      color: var(--navy);
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .meta-line {
+      color: var(--slate-accent);
+      font-weight: 600;
+      font-size: 0.88rem;
+      margin-bottom: 8px;
+    }
+
+    ul.clean-list {
+      padding-left: 18px;
+      color: var(--text);
+      font-size: 0.93rem;
+    }
+
+    ul.clean-list li {
+      margin-bottom: 6px;
+    }
+
+    .cv-download-bar {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--soft);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--navy);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 9px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary:hover {
+      background: var(--slate-accent);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--navy);
+      border-radius: 8px;
+      padding: 18px;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .project-card h3 {
+      color: var(--navy);
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      font-size: 0.91rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .result-box {
+      background: #edf2f7;
+      border-left: 3px solid var(--slate-accent);
+      padding: 9px 11px;
+      border-radius: 4px;
+      font-size: 0.87rem;
+      color: var(--navy);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-inner">
+      <div class="avatar-wrap">
+        <img src="ys.jpeg" alt="Yajanismar Salazar" />
+      </div>
+      <div class="hero-text">
+        <span class="hero-role">Analista de Sistemas · Estudiante de Ingeniería en Sistemas</span>
+        <h1>Yajanismar Salazar</h1>
+        <p>
+          Analista de Sistemas y Datos Junior con experiencia en gestión de bases de datos, soporte de aplicaciones y creación de dashboards para la visualización de indicadores clave, orientada a la resolución eficiente de incidencias, automatización de procesos e integridad de la información.
+        </p>
+        <div class="contact-strip">
+          <span>0424-8912975</span>
+          <span>Yajanismarsalazar@gmail.com</span>
+          <span>Av. Rómulo Gallegos, Vía Las Campiñas, casa #06 · Upata, Estado Bolívar</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#perfil-cv">Perfil y Currículo</a>
+          <a href="#proyectos">Proyectos Destacados</a>
+          <a href="#formacion-cert">Formación y Certificaciones</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="perfil-cv">
+      <h2>Currículo Actualizado</h2>
+      <div class="cv-grid">
+        <div class="item-block">
+          <h3>Experiencia — U.E.I. SAN ANTONIO C.A.</h3>
+          <div class="meta-line">2023 – Actualidad</div>
+          <p style="font-size:0.92rem; color: var(--muted); margin-bottom:8px;">
+            Responsable del soporte, mantenimiento y mejora continua de los sistemas informáticos internos de la institución, optimizando procesos y gestión de información.
+          </p>
+          <ul class="clean-list">
+            <li>Mantenimiento preventivo y correctivo de aplicaciones y sistemas internos.</li>
+            <li>Análisis y solución de incidencias relacionadas con el funcionamiento del software.</li>
+            <li>Administración, actualización y mantenimiento de bases de datos institucionales.</li>
+            <li>Diseño y desarrollo de dashboards e informes para apoyar la toma de decisiones.</li>
+            <li>Consultas, extracción de datos, automatización de procesos y soporte a usuarios.</li>
+          </ul>
+        </div>
+
+        <div class="item-block">
+          <h3>Herramientas y Competencias Técnicas</h3>
+          <div class="meta-line">Stack Tecnológico</div>
+          <ul class="clean-list">
+            <li><strong>Lenguajes de Programación:</strong> Python, HTML, Java.</li>
+            <li><strong>Herramientas de QA y Gestión:</strong> Azure DevOps, Jira, Xray, Kanban, ALM.</li>
+            <li><strong>Bases de Datos:</strong> SQL, PL/SQL, MySQL.</li>
+            <li><strong>Plataformas y Sistemas:</strong> Postman, SoapUI, Control-M.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cv-download-bar">
+        <span style="font-size:0.9rem; color: var(--muted);">
+          Documento adjunto: <strong>CURRICULO VITAE YAJANISMAR SALAZAR UBA.pdf</strong>
+        </span>
+        <a class="btn-primary" href="CURRICULO%20VITAE%20YAJANISMAR%20SALAZAR%20UBA.pdf" target="_blank" rel="noopener">
+          Abrir Currículo en PDF
+        </a>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos Más Destacados</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div>
+            <h3>Bocaditos Mailliw — E-commerce de Repostería</h3>
+            <p>
+              Aplicación web de comercio electrónico con catálogo filtrable por categoría, carrito interactivo, cálculo de subtotal, empaque (5 %) y envío de comanda estructurada a WhatsApp.
+            </p>
+            <div class="result-box">
+              <strong>Resultado:</strong> Automatiza el cálculo de pedidos y estandariza la confirmación de órdenes por WhatsApp.
+            </div>
+          </div>
+          <a class="btn-primary" href="https://yajanismarsalazar.github.io/bocaditos-mailliw-ecommerce/" target="_blank" rel="noopener">
+            Ver Proyecto
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <h3>Portal de Pago — U.E.I SAN ANTONIO C.A.</h3>
+            <p>
+              Aplicación web para consulta de estado de cuenta por cédula o matrícula, conversión USD ($) a Bolívares (Bs. tasa BCV), selección de conceptos pendientes y generación de comprobantes en revisión.
+            </p>
+            <div class="result-box">
+              <strong>Resultado:</strong> Agiliza la consulta de saldos y el reporte estructurado de pagos para validación administrativa.
+            </div>
+          </div>
+          <a class="btn-primary" href="https://yajanismarsalazar.github.io/-portal-pagos-uei-san-antonio/" target="_blank" rel="noopener">
+            Ver Proyecto
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <h3>Panel Administrativo de Pagos — U.E.I SAN ANTONIO C.A.</h3>
+            <p>
+              Panel administrativo con indicadores (KPIs), conciliación de pagos, registro manual de comprobantes, control de tasa BCV y exportación de estado de cuenta en PDF.
+            </p>
+            <div class="result-box">
+              <strong>Resultado:</strong> Centraliza la conciliación de pagos, actualiza saldos y emite reportes en PDF para control institucional.
+            </div>
+          </div>
+          <a class="btn-primary" href="https://yajanismarsalazar.github.io/admin-pagos-uei-san-antonio/" target="_blank" rel="noopener">
+            Ver Proyecto
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section id="formacion-cert">
+      <h2>Formación Académica y Certificaciones</h2>
+      <div class="cv-grid">
+        <div class="item-block">
+          <h3>Formación</h3>
+          <ul class="clean-list">
+            <li><strong>Ingeniería en Sistemas (Estudiante)</strong> — Universidad Bicentenaria de Aragua (2023 – Actualidad).</li>
+            <li><strong>Licenciatura en Química</strong> — Universidad de Oriente (2009 – 2017).</li>
+          </ul>
+        </div>
+        <div class="item-block">
+          <h3>Certificaciones / Constancias</h3>
+          <ul class="clean-list">
+            <li><strong>Constancia de Actividades — U.E.I. SAN ANTONIO C.A.:</strong> Soporte de sistemas internos, gestión de información y apoyo en herramientas de control de pagos.</li>
+            <li><em>Espacio listo para incorporar constancias o certificados adicionales que desees adjuntar.</em></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Yajanismar Salazar · Portafolio de Ingeniería en Sistemas · Desplegado en GitHub Pages
+  </footer>
+</body>
+</html>
