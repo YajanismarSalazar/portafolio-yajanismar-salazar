@@ -1,4 +1,3 @@
-```markdown
 # Portafolio Profesional — Yajanismar Salazar
 
 Portafolio web de presentación profesional para Ingeniería en Sistemas, con perfil, currículo actualizado, muestra de proyectos destacados con resultados y formación/certificaciones.
@@ -19,3 +18,4 @@ Web Site: https://yajanismarsalazar.github.io/portafolio-yajanismar-salazar/
 - `ys.jpeg`: Fotografía de presentación.
 - `CURRICULO VITAE YAJANISMAR SALAZAR UBA.pdf`: Currículo en formato PDF.
 - `CERTIFICACIÓN UEISANANTONIO-UBA.pdf`: Constancia de actividades y desarrollo de herramientas.
+```[cite: 6, 12]
